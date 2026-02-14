@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: piyu1234
+      MARIADB_DATABASE: maria
+    ports:
+      - "3307:3306"
+    volumes:
+      - maria_data:/var/lib/mysql
+
+volumes:
+  maria_data:
