@@ -1,6 +1,5 @@
 const prisma = require("../config/db");
 
-// GET all users
 exports.getAllUsers = async (req, res) => {
     try {
         const users = await prisma.user.findMany();
@@ -11,7 +10,6 @@ exports.getAllUsers = async (req, res) => {
     }
 };
 
-// POST new user
 exports.createUser = async (req, res) => {
     const { email, name } = req.body;
     try {
