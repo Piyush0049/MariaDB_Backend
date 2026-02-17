@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+console.log('Environment variables loaded. DB_USER:', process.env.DB_USER);
 const userRoutes = require('./routes/userRoutes');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
